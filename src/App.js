@@ -5,6 +5,7 @@ import Inicio from './components/Inicio';
 import Blog from './components/Blog';
 import AcercaDe from './components/AcercaDe';
 import Post from './components/Post';
+import Error404 from './components/Error404';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           <Route path="/blog" element={<Blog />} />
           <Route path="/post/:id" element={<Post />} />
           <Route path="/acerca-de" element={<AcercaDe />} />
+          <Route path='*' element={<Error404 />} />
         </Routes>
       </Main>
     </Div>
