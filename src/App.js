@@ -1,11 +1,12 @@
-import React,{Fragment} from 'react'
-import {Routes,Route,Link,NavLink} from 'react-router-dom';
+import React from 'react'
+import {Routes,Route,NavLink} from 'react-router-dom';
 import styled from 'styled-components';
-import Inicio from './components/Inicio';
-import Blog from './components/Blog';
-import AcercaDe from './components/AcercaDe';
+import Inicio from './pages/Inicio';
+import Blog from './pages/Blog';
+import AcercaDe from './pages/AcercaDe';
 import Post from './components/Post';
 import Error404 from './components/Error404';
+import Styles from './App.module.css';
 
 function App() {
   return (
@@ -13,14 +14,14 @@ function App() {
       <Header>
         <H1>Mi Blog Personal</H1>
         <Nav>
-          <NavLink to='/'>Inicio</NavLink>
-          <NavLink to='/blog'>Blog</NavLink>
-          <NavLink to='/acerca-de'>Acerca de</NavLink>
+          <NavLink className={(navData) => navData.isActive? Styles.activa:''}to='/inicio'>Inicio</NavLink>
+          <NavLink className={(navData) => navData.isActive? Styles.activa:''}to='/blog'>Blog</NavLink>
+          <NavLink className={(navData) => navData.isActive? Styles.activa:''}to='/acerca-de'>Acerca de</NavLink>
         </Nav>
       </Header>
       <Main>
         <Routes>
-          <Route path="/" element={<Inicio />} exact={true} />
+          <Route path="/inicio" element={<Inicio />} exact={true} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/post/:id" element={<Post />} />
           <Route path="/acerca-de" element={<AcercaDe />} />

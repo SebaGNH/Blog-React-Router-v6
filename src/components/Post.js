@@ -13,7 +13,7 @@ const Post = () => {
         <p>{dataPosts[id - 1].descripcion}</p>
       </div>
     :
-    <Navigate to='/' />
+    <Navigate to='/inicio' />
     }
     </>
   );
