@@ -11,7 +11,7 @@ const Blog = () => {
           <ul>
             {dataPosts.map( (post) => (
               <li key={post.id}>
-                <Link to={`post/${post.id}`} > {post.titulo} </Link>
+                <Link to={`/post/${post.id}`} > {post.titulo}</Link>
               </li>
             ))}
           </ul>

@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import Inicio from './components/Inicio';
 import Blog from './components/Blog';
 import AcercaDe from './components/AcercaDe';
+import Post from './components/Post';
 
 function App() {
   return (
@@ -20,7 +21,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Inicio />} exact={true} />
           <Route path="/blog" element={<Blog />} />
-          <Route path="/post" element={<Blog />} /> 
+          <Route path="/post/:id" element={<Post />} />
           <Route path="/acerca-de" element={<AcercaDe />} />
         </Routes>
       </Main>
