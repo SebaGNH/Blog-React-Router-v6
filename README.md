@@ -1,4 +1,4 @@
-# Blog personal con React Router
+# Blog personal con React Router Dom V6
 
 
 <!-- 
@@ -15,4 +15,12 @@ ul>li*3{Articulo #$}
   <li>Articulo #2</li>
   <li>Articulo #3</li>
 </ul>
+
+
+body
+    background-color: #292929
+    display: flex
+    justify-content: center
+    align-items: center
+    min-height: 100vh
 -->

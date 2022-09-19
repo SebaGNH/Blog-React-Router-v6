@@ -12,16 +12,23 @@ body{
   font-family: 'Open Sans', sans-serif;
   display: flex;
   justify-content: center;
+  align-items: center;
+  min-height: 25vh
 }
 
 
 a {
   text-decoration: none;
+  color: #57B6DB;
 }
-
 a:hover {
   text-decoration: underline;
 }
-a:visited {
-  color: #8585FF; /* verde */
-  }
+a:active {
+  color: #00FF00;
+}
+
+
+h2{
+  margin-bottom: .5rem;
+}
